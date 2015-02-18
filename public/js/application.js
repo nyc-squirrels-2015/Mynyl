@@ -1,7 +1,29 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
+  $('#edit_toggle').on('click', function(event){
+    $('.edit_holder').toggle();
+  })
+
+
+
+  $('.delete_btn').on('click', function(event){
+    event.preventDefault();
+
+    $.ajax({
+      type: "DELETE",
+      url: this.href,
+      success: function(response){
+        // this re-insert the altered vinyls table response from the server
+        $('.user_vinyls').html(response)
+      },
+      error: function(){
+        console.log("Not Working")
+      }
+    })
+
+  })
+
+
+
 });

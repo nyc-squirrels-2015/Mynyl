@@ -7,6 +7,7 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/header.css">
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -15,10 +16,19 @@
   <title></title>
 </head>
 <body>
-<div id="content">
-  <header>
-  </header>
-  <%= yield %>
-</div>
+  <div class="header">
+    <h1>Mynyl</h1>
+    <%if current_user %>
+        <div class="logged_in_nav">
+          <a href="/surveys">See all Surveys</a>
+          <a href="/users/<%=current_user.id%>">Go to Profile</a>
+          <a href="/logout">Logout</a>
+        </div>
+        <%end%>
+  </div>
+  <div id="content">
+
+    <%= yield %>
+  </div>
 </body>
 </html>
