@@ -165,7 +165,7 @@
   font-size:25px;
 }
 .submit_btn:hover{
-  color:#C87533;
+  color:gray;
   background:none;
   border:none;
 }
@@ -174,6 +174,35 @@
 #holder{
 
   margin-top:25px ;
+}
+
+#new_vinyl_form{
+  position:relative;
+  top:15px;
+  background:#C87533;
+  height:900px;
+
+}
+
+#new_vinyl_form form{
+  position:relative;
+  top:125px  ;
+  text-align:center;
+}
+
+.create_vinyl_container{
+  position:relative;
+  top:-48px;
+  font-family: 'Poiret One', cursive;
+  font-size:20px;
+  color:white;
+  background-color:black;
+  height:50px;
+  text-align:center;
+}
+
+.create_vinyl_container h1{
+
 }
 
 

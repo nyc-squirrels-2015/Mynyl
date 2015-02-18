@@ -1,18 +1,17 @@
-<div align="center">
-
-<div id='new_vinyl_form'>
-
-  <form action="/vinyls" method="POST">
-
-    Artist: <input type="text" name ="artist">
-    Album: <input type="text" name="title">
-    Artwork URL: <input type='text' name="artwork">
-    Notes <input type="textarea" name="notes">
-            <input type="submit" value="Create">
-
-  </form>
-
-</div>
+<div class="create_vinyl_container">
+  <h1> Got new Vinyl? </h1>
+  <div id='new_vinyl_form'>
 
 
+
+    <form action="/vinyls" method="POST">
+
+      <p>Artist: <input type="text" name ="artist"></p>
+      <p>Album: <input type="text" name="title"></p>
+      <p>Artwork: <input type='text' name="artwork"></p>
+      <p>Notes <input type="textarea" name="notes"></p>
+              <p><input class="submit_btn" type="submit" value="Create"></p>
+    </form>
+
+  </div>
 </div>
