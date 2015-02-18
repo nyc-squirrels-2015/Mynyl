@@ -6,11 +6,11 @@ end
 
 
 
-get '/vinyls/:id' do
+get '/vinyls/:id' do |id|
 
 
 
-  @vinyl = Vinyl.find_by(id: params[:id])
+  @vinyl = Vinyl.find(id)
   erb :show_vinyl
 
 end
@@ -26,9 +26,12 @@ post '/vinyls' do
 end
 
 
-delete '/vinyls/:id' do
+delete '/vinyls/:id' do |id|
+
+  p '100'*10
+  Vinyl.find(id).destroy
 
 
-
+   erb :_user_vinyls, :layout => false
 
 end
