@@ -1,0 +1,19 @@
+<!-- partial to be rendered on user dashboard -->
+
+<% Vinyl.all.where(user_id: session[:user].id).each do |vinyl| %>
+  <div class='vinyl_list' style="display:inline;">
+
+    <a href="/vinyls/<%=vinyl.id%>"><%=vinyl.title%> </a> by <h2><%= vinyl.artist%></h2>
+
+    <img src="<%= vinyl.artwork%>">
+
+    <form id='edit_user' action='/users/<%=@user.id%>' method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <p> Edit Account </p>
+    name: <input type="text" name="name">
+    password: <input type="text" name="password">
+      <input class="submit_btn" type="submit">
+  </form>
+
+  </div>
+<%end%>

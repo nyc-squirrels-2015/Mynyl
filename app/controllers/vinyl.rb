@@ -15,14 +15,17 @@ end
 
 
 post '/vinyls' do
-  @new_vinyl = Vinyl.create(artist: params[:artist], title: params[:title], review: params[:review])
 
-  redirect "/users/#{session[:user].id"
+  @new_vinyl = Vinyl.create(artist: params[:artist], title: params[:title], notes: params[:notes], user_id: session[:user].id, artwork: params[:artwork])
+  p @new_vinyl
+  p '*'*30
+  redirect "/users/#{session[:user].id}"
 
 end
 
 
 put '/vinyls/:id' do
+
 
 
 
