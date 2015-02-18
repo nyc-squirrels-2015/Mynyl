@@ -10,14 +10,17 @@
     name: <input type="text" name="name">
     password: <input type="text" name="password">
       <input class="submit_btn" type="submit">
+  </form>
 
 
 <p>
   <form action="/users/<%=@user.id%>" method="POST">
+
     <input type="hidden" name="_method" value="DELETE">
    <input type="submit" value="Delete Account">
   </form>
 
 
 </p>
+
 </div>
