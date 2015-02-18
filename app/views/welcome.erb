@@ -1,28 +1,29 @@
-<div id="welcomebox">
+<div id="outerbox">
 
 
+  <div id="innerbox">  <form id='login_form' action="/login" method="POST">
+    <h1> Login </h1>
 
-<form id='login_form' action="/login" method="POST">
-
-  name:     <input type="text" name="name">
-  password: <input type="text" name="password">
-            <input class="submit_btn" type="submit" value="login">
-
-
-</form>
+      name:     <input type="text" name="name">
+      password: <input type="text" name="password">
+                <input class="submit_btn" type="submit" value="login">
 
 
-<form id='signup_form' action="/signup" method="POST">
+    </form>
 
-  name:     <input type="text" name="name">
-
-  password: <input type="text" name="password">
-            <input class="submit_btn" type="submit" value="signup">
-
-</form>
+    <h1> Sign Up </h1>
 
 
+    <form id='signup_form' action="/signup" method="POST">
 
+      name:     <input type="text" name="name">
+
+      password: <input type="text" name="password">
+                <input class="submit_btn" type="submit" value="signup">
+
+    </form>
+
+  </div>
 </div>
 
 
