@@ -16,11 +16,19 @@
   <title></title>
 </head>
 <body>
-<div id="content">
   <div class="header">
-
+    <h1>Mynyl</h1>
+    <%if current_user %>
+        <div class="logged_in_nav">
+          <a href="/surveys">See all Surveys</a>
+          <a href="/users/<%=current_user.id%>">Go to Profile</a>
+          <a href="/logout">Logout</a>
+        </div>
+        <%end%>
   </div>
-  <%= yield %>
-</div>
+  <div id="content">
+
+    <%= yield %>
+  </div>
 </body>
 </html>
