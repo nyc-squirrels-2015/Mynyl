@@ -8,6 +8,11 @@
 
 }
 
+.header h1{
+
+float:right;
+}
+
 
 
 .edit_holder{
@@ -17,5 +22,12 @@
 
 
 .navbar{
-background:black;
+
+}
+
+#record{
+
+  height:150px;
+  width:150px;
+
 }
