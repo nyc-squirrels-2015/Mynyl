@@ -5,7 +5,7 @@
 <% session[:user].vinyls.all.each do |vinyl| %>
   <div class='vinyl_list' style="display:inline;">
 
-    <h1><%= vinyl.title%> </h1> <p>by</p> <h2><%= vinyl.artist%></h2>
+    <h2><%= vinyl.title%> </h2> <p>by</p> <h3><%= vinyl.artist%></h3>
 
     <p>>> <%=vinyl.notes%> <<</p>
     <img src="<%= vinyl.artwork%>">

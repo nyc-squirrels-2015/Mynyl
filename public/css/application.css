@@ -67,11 +67,37 @@
 }
 
 #innerbox{
-
   position:relative;
   background-color:;
   top:50px;
 }
+
+#dashboard{
+  position:relative;
+  font-family: 'Poiret One', cursive;
+  width:100%;
+  text-align:center;
+
+}
+
+#dashboard h1{
+  font-size:35px;
+  color:white;
+  background-color:black;
+  height:50px;
+}
+
+#outerdashbox{
+  position:relative;
+
+}
+
+.vinyl_list{
+
+
+
+}
+
 
 
 
