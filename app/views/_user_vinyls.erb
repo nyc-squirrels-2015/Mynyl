@@ -10,15 +10,8 @@
     </div>
 
     <p> <%=vinyl.notes%> </p>
-    <img src="<%= vinyl.artwork%>">
+    <p><img src="<%= vinyl.artwork%>"></p>
 
-    <form id='edit_vinyl' action='/vinyls/<%=vinyl.id%>' method="POST">
-    <input type="hidden" name="_method" value="PUT">
-    <a id='edit_toggle' href="#"> Edit  </a>
-
-    <p class="edit_vinyl">update notes: <input type="text" name="notes"></p>
-
-  </form>
 
 <!--   Ajax delete of record -->
   <a  href="/vinyls/<%=vinyl.id%>" class="delete_btn" name="<%=vinyl.id%>">Delete</a>

@@ -5,7 +5,6 @@ get '/vinyls/create' do
 end
 
 
-
 post '/vinyls' do
 
   @new_vinyl = Vinyl.create(artist: params[:artist], title: params[:title], notes: params[:notes], user_id: session[:user].id, artwork: params[:artwork])
