@@ -1,12 +1,10 @@
 <div align='center'>
 
-
-
   <h1>Current account >>  <%= @user.name %></h1>
 
   <a href='/vinyls/create'>Add Record</a>
 
-<a href="#" id="edit_toggle"> Edit Account </a>
+  <a href="#" id="edit_toggle"> Edit Account </a>
   <div id="holder">
     <div class="edit_holder">
       <form action='/users/<%=@user.id%>' method="POST">
