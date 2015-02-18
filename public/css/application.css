@@ -69,7 +69,8 @@
 #innerbox{
   position:relative;
   background-color:;
-  top:50px;
+  top:200px;
+  text-align:center;
 }
 
 #dashboard{
@@ -201,9 +202,38 @@
   text-align:center;
 }
 
-.create_vinyl_container h1{
+#toggle_login:hover{
+  color:white;
+}
+
+#toggle_signup:hover{
+  color:white;
+}
+
+#outer_login_form{
+
+  height:100px;
+  width:100%;
+  text-align:center;
+}
+
+#login_form{
+  display:none;
+ }
+
+
+#signup_form{
+  display:none;
+}
+
+
+.create_vinyl_container input{
+
+  color:black;
 
 }
+
+
 
 
 

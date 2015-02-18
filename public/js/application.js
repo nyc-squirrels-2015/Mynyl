@@ -1,14 +1,23 @@
 $(document).ready(function() {
 
 
+  $('#toggle_login').on('click', function(event){
+    $('#login_form').toggle();
+  })
+
+
+  $('#toggle_signup').on('click', function(event){
+    $('#signup_form').toggle();
+  })
+
+
+  $("#record").on('mouseenter',function(event){
+    $(this).rotate(90);
+  });
+
   $('#edit_user_toggle').on('click', function(event){
     $('.edit_user').toggle();
   })
-
-  $('#edit_toggle').on('click', function(event){
-    $('.edit_vinyl').toggle();
-  })
-
 
   $('.delete_btn').on('click', function(event){
     event.preventDefault();
@@ -26,6 +35,8 @@ $(document).ready(function() {
     })
 
   })
+
+
 
 });
 
