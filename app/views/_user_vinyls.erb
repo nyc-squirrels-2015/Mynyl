@@ -1,19 +1,24 @@
 <!-- partial to be rendered on user dashboard -->
 
-<% Vinyl.all.where(user_id: session[:user].id).each do |vinyl| %>
+<% session[:user].vinyls.all.each do |vinyl| %>
   <div class='vinyl_list' style="display:inline;">
 
-    <a href="/vinyls/<%=vinyl.id%>"><%=vinyl.title%> </a> by <h2><%= vinyl.artist%></h2>
+    <a href="/vinyls/<%=vinyl.id%>"><%= vinyl.title%> </a> by <h2><%= vinyl.artist%></h2>
 
     <img src="<%= vinyl.artwork%>">
 
-    <form id='edit_user' action='/users/<%=@user.id%>' method="POST">
+    <form id='edit_vinyl' action='/vinyls/<%=vinyl.id%>' method="POST">
     <input type="hidden" name="_method" value="PUT">
-    <p> Edit Account </p>
-    name: <input type="text" name="name">
-    password: <input type="text" name="password">
+    <p><a id='edit_toggle' href="#"> Edit  </a></p>
+    title: <input type="text" name="name">
+    artist: <input type="text" name="name">
+    notes: <input type="text" name="password">
+    url: <input type="text" name="artwork">
       <input class="submit_btn" type="submit">
   </form>
+
+<!--   Ajax delete of record -->
+  <a  href="/vinyls/<%=vinyl.id%>" class="delete_btn" name="<%=vinyl.id%>">Delete</a>
 
   </div>
 <%end%>
