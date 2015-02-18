@@ -7,7 +7,7 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/application.css">
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -18,9 +18,8 @@
 <body>
   <div class="header">
     <h1>Mynyl</h1>
-    <%if current_user %>
+    <%if session[:user] %>
         <div class="navbar">
-          <a href="/users/<%=current_user.id%>">Go to Profile</a>
           <a href="/logout">Logout</a>
         </div>
     <%end%>
