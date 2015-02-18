@@ -5,15 +5,16 @@ end
 
 post '/login' do
 
-  session[:user].id = User.find_by(name: params[:name],password: params[:password])
+  session[:user] = User.find_by(name: params[:name])
 
   # if user exists redirect to their dashboard
-
-
+  if session[:user]
     redirect "/users/#{session[:user].id}"
+  end
+
+    redirect "/"
 
 end
-
 
 
 post '/signup' do
