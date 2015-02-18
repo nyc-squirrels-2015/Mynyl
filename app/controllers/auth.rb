@@ -24,3 +24,5 @@ post '/signup' do
   redirect "/users/#{session[:user].id}"
 
 end
+
+

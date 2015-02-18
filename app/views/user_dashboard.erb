@@ -1,0 +1,23 @@
+<div align='center'>
+  <h1>Mynyl Collection</h1>
+
+  <p>Current account >>  <%= @user.name %></p>
+
+
+  <form id='edit_user' action='/users/<%=@user.id%>' method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <p> Edit Account </p>
+    name: <input type="text" name="name">
+    password: <input type="text" name="password">
+      <input class="submit_btn" type="submit">
+
+
+<p>
+  <form action="/users/<%=@user.id%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+   <input type="submit" value="Delete Account">
+  </form>
+
+
+</p>
+</div>
