@@ -3,18 +3,20 @@
 <div class="user_vinyls">
 
 <% session[:user].vinyls.all.each do |vinyl| %>
-  <div class='vinyl_list' style="display:inline;">
+  <div class='vinyl_list'>
 
-    <h2><%= vinyl.title%> </h2> <p>by</p> <h3><%= vinyl.artist%></h3>
+    <div id="color_container">
+      <h2>|> <%= vinyl.title%> <| </h2> <p>by</p> <h3> <| <%= vinyl.artist%> |> </h3>
+    </div>
 
-    <p>>> <%=vinyl.notes%> <<</p>
+    <p> <%=vinyl.notes%> </p>
     <img src="<%= vinyl.artwork%>">
 
     <form id='edit_vinyl' action='/vinyls/<%=vinyl.id%>' method="POST">
     <input type="hidden" name="_method" value="PUT">
-    <p><a id='edit_toggle' href="#"> Edit  </a></p>
+    <a id='edit_toggle' href="#"> Edit  </a>
 
-    update notes: <input type="text" name="notes">
+    <p class="edit_vinyl">update notes: <input type="text" name="notes"></p>
 
   </form>
 

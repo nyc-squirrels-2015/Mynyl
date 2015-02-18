@@ -1,9 +1,14 @@
 $(document).ready(function() {
 
 
-  $('#edit_toggle').on('click', function(event){
-    $('.edit_holder').toggle();
+  $('#edit_user_toggle').on('click', function(event){
+    $('.edit_user').toggle();
   })
+
+  $('#edit_toggle').on('click', function(event){
+    $('.edit_vinyl').toggle();
+  })
+
 
   $('.delete_btn').on('click', function(event){
     event.preventDefault();
@@ -23,3 +28,5 @@ $(document).ready(function() {
   })
 
 });
+
+
