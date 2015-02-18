@@ -5,8 +5,6 @@ $(document).ready(function() {
     $('.edit_holder').toggle();
   })
 
-
-
   $('.delete_btn').on('click', function(event){
     event.preventDefault();
 
@@ -23,11 +21,5 @@ $(document).ready(function() {
     })
 
   })
-
-
-
-
-
-
 
 });
