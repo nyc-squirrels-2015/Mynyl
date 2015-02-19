@@ -11,9 +11,17 @@ $(document).ready(function() {
   })
 
 
-  $("#record").on('mouseenter',function(event){
-    $(this).rotate(90);
+
+
+  $('#record').mouseenter(function(event){
+
+      console.log("mousein")
+                  $("#record").rotate(90);
+
+
   });
+
+
 
   $('#edit_user_toggle').on('click', function(event){
     $('.edit_user').toggle();
